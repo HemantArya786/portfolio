@@ -1,4 +1,3 @@
-import React from "react";
 import profile from "../assets/profile.jpg"; // ✅ Corrected import
 
 const Hero = () => {

@@ -1,23 +1,26 @@
-import React, { useState } from "react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 
-const Contact = () => {
+const Contact: React.FC = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleWhatsAppSubmit = (e) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
     const { name, email, message } = form;
-    const fullMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-    const whatsappURL = `https://wa.me/918586918598?text=${fullMessage}`;
+    const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+    const whatsappURL = `https://wa.me/918586918598?text=${whatsappMessage}`;
 
     window.open(whatsappURL, "_blank");
   };
@@ -28,13 +31,13 @@ const Contact = () => {
       className="py-16 px-6 text-white relative"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80')", // 💡 Change this to your desired background image URL
+          "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Overlay to darken image for better contrast */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
       <div className="relative z-10 max-w-xl mx-auto text-center">
@@ -61,9 +64,9 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
+        {/* Form */}
         <form
-          onSubmit={handleWhatsAppSubmit}
+          onSubmit={handleSubmit}
           className="bg-white/10 p-6 rounded-lg shadow space-y-4 text-left"
         >
           <input
@@ -89,8 +92,8 @@ const Contact = () => {
             placeholder="Your Message"
             value={form.message}
             onChange={handleChange}
-            className="w-full rounded px-4 py-2 bg-white/80 text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
             rows={5}
+            className="w-full rounded px-4 py-2 bg-white/80 text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
             required
           ></textarea>
           <button
