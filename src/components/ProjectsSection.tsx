@@ -4,34 +4,98 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Enterprise SaaS Platform",
-    category: "Full-Stack Application",
-    description: "A comprehensive project management platform built for enterprise teams. Features real-time collaboration, advanced analytics, and seamless integrations.",
-    problem: "Teams struggled with fragmented tools and poor visibility into project progress.",
-    solution: "Built an all-in-one platform with real-time sync, custom dashboards, and automated workflows.",
-    outcome: "Reduced project delivery time by 40% for 500+ enterprise users.",
-    technologies: ["React", "Node.js", "MongoDB", "Socket.io", "AWS"],
-    gradient: "from-blue-500/20 to-purple-500/20",
-  },
-  {
-    title: "E-commerce Marketplace",
-    category: "Web Application",
-    description: "A modern multi-vendor marketplace with advanced search, real-time inventory, and seamless checkout experience.",
-    problem: "Existing platform couldn't handle traffic spikes and had poor mobile experience.",
-    solution: "Rebuilt with modern stack, implemented CDN caching, and mobile-first responsive design.",
-    outcome: "3x improvement in page speed, 150% increase in mobile conversions.",
-    technologies: ["Next.js", "PostgreSQL", "Stripe", "Redis", "Vercel"],
+    title: "DecorMate",
+    category: "Full-Stack MERN Platform",
+    description:
+      "A modern interior design platform connecting homeowners, designers, and vendors with smart project management tools.",
+    problem:
+      "Interior design workflows were fragmented across inspiration, vendor discovery, and project tracking.",
+    solution:
+      "Built a unified MERN-based platform with design discovery, vendor portfolios, and scalable APIs.",
+    outcome:
+      "Enabled a seamless end-to-end interior design experience with scalable architecture.",
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redux",
+      "Tailwind CSS",
+      "AWS EC2",
+    ],
+    liveUrl: "https://decormate.vercel.app",
+    githubUrl: "",
+    imageUrl:
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     gradient: "from-emerald-500/20 to-cyan-500/20",
   },
   {
-    title: "Real-time Analytics Dashboard",
-    category: "Data Visualization",
-    description: "An interactive analytics platform providing real-time insights into business metrics with customizable visualizations.",
-    problem: "Business decisions were delayed due to slow, outdated reporting tools.",
-    solution: "Created real-time data pipeline with interactive charts and automated alerts.",
-    outcome: "Enabled data-driven decisions with sub-second latency for 10M+ daily events.",
-    technologies: ["React", "D3.js", "Node.js", "WebSocket", "ClickHouse"],
+    title: "CoinStaX",
+    category: "Crypto Asset Management Platform",
+    description:
+      "A secure web platform to manage crypto assets, transactions, and automated returns with admin control.",
+    problem:
+      "Users lacked a simple way to track assets, returns, and transactions securely.",
+    solution:
+      "Developed a MERN stack platform with JWT & OTP auth, cron-based returns, and admin dashboards.",
+    outcome:
+      "Delivered a secure, scalable crypto dashboard with automated financial workflows.",
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Node Cron",
+      "Tailwind CSS",
+    ],
+    liveUrl: "https://dev.coinstax.co",
+    githubUrl: "",
+    imageUrl:
+      "https://images.unsplash.com/photo-1621504450181-5d356f61d307",
+    gradient: "from-blue-500/20 to-purple-500/20",
+  },
+  {
+    title: "Ezee2Fly",
+    category: "Travel Booking Platform",
+    description:
+      "A travel portfolio and booking application with admin dashboard and secure inquiries.",
+    problem:
+      "Manual inquiry handling and poor admin visibility slowed travel operations.",
+    solution:
+      "Built a full-stack solution with dynamic packages, admin authentication, and inquiry management.",
+    outcome:
+      "Improved operational efficiency and user engagement with a modern UI.",
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+    ],
+    liveUrl: "https://ezee2fly.com",
+    githubUrl: "",
+    imageUrl:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
     gradient: "from-orange-500/20 to-rose-500/20",
+  },
+  {
+    title: "TAG Institute Website",
+    category: "Frontend Web Platform",
+    description:
+      "Maintained and enhanced the digital presence of a music production institute.",
+    problem:
+      "Frequent content updates and UI changes were difficult to manage.",
+    solution:
+      "Implemented scalable UI updates using Next.js, Bootstrap 5, and clean CSS.",
+    outcome:
+      "Delivered a fast, responsive, and easily maintainable institute website.",
+    technologies: ["Next.js", "Bootstrap", "CSS"],
+    liveUrl: "https://tagmumbai.com",
+    githubUrl: "",
+    imageUrl:
+      "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+    gradient: "from-fuchsia-500/20 to-pink-500/20",
   },
 ];
 
@@ -57,94 +121,102 @@ const ProjectsSection = () => {
         </motion.div>
 
         <div className="space-y-32">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 80 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: index * 0.15 }}
-              className="group"
-            >
-              <div className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-                {/* Project Visual */}
-                <div className={`relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                  <div className={`aspect-[4/3] rounded-3xl bg-gradient-to-br ${project.gradient} glass overflow-hidden card-depth`}>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-3/4 h-3/4 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 shadow-2xl flex items-center justify-center">
-                        <span className="text-5xl font-display font-bold text-gradient opacity-50">
-                          {index + 1}
+          {projects.map((project, index) => {
+            const isImageLeft = index % 2 === 0;
+
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 80 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: index * 0.15 }}
+              >
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  {/* IMAGE */}
+                  <div
+                    className={`relative ${
+                      isImageLeft ? "lg:order-1" : "lg:order-2"
+                    }`}
+                  >
+                    <div
+                      className={`aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br ${project.gradient} card-depth`}
+                    >
+                      <img
+                        src={project.imageUrl}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+
+                  {/* CONTENT */}
+                  <div
+                    className={`space-y-6 ${
+                      isImageLeft ? "lg:order-2" : "lg:order-1"
+                    }`}
+                  >
+                    <span className="text-primary font-medium text-sm uppercase tracking-widest">
+                      {project.category}
+                    </span>
+
+                    <h3 className="text-3xl md:text-4xl font-display font-bold">
+                      {project.title}
+                    </h3>
+
+                    <p className="body-large">{project.description}</p>
+
+                    <div className="space-y-3 pt-4">
+                      <p className="text-sm text-muted-foreground">
+                        <strong>Problem:</strong> {project.problem}
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        <strong>Solution:</strong> {project.solution}
+                      </p>
+                      <p className="text-sm font-medium">
+                        <strong>Outcome:</strong> {project.outcome}
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 pt-4">
+                      {project.technologies.map((tech, i) => (
+                        <span
+                          key={i}
+                          className="px-3 py-1 text-xs rounded-full bg-secondary"
+                        >
+                          {tech}
                         </span>
-                      </div>
+                      ))}
                     </div>
-                  </div>
-                </div>
 
-                {/* Project Info */}
-                <div className={`space-y-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <span className="text-primary font-medium text-sm uppercase tracking-widest">
-                    {project.category}
-                  </span>
-                  
-                  <h3 className="text-3xl md:text-4xl font-display font-bold">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="body-large">
-                    {project.description}
-                  </p>
-
-                  {/* Problem / Solution / Outcome */}
-                  <div className="space-y-4 pt-4">
-                    <div className="flex gap-4">
-                      <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground w-20 shrink-0">Problem</span>
-                      <p className="text-sm text-muted-foreground">{project.problem}</p>
-                    </div>
-                    <div className="flex gap-4">
-                      <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground w-20 shrink-0">Solution</span>
-                      <p className="text-sm text-muted-foreground">{project.solution}</p>
-                    </div>
-                    <div className="flex gap-4">
-                      <span className="text-xs font-medium uppercase tracking-wider text-primary w-20 shrink-0">Outcome</span>
-                      <p className="text-sm text-foreground font-medium">{project.outcome}</p>
-                    </div>
-                  </div>
-
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 pt-4">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground"
+                    <div className="flex gap-4 pt-4">
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 font-medium hover:text-primary"
                       >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex gap-4 pt-4">
-                    <a
-                      href="#"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors group/link"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span className="relative">
+                        <ExternalLink className="w-4 h-4" />
                         View Live
-                        <span className="absolute bottom-0 left-0 w-0 h-px bg-primary group-hover/link:w-full transition-all duration-300" />
-                      </span>
-                    </a>
-                    <a
-                      href="#"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <Github className="w-4 h-4" />
-                      Source
-                    </a>
+                      </a>
+
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground"
+                        >
+                          <Github className="w-4 h-4" />
+                          Source
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
