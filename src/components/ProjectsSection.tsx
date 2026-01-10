@@ -23,10 +23,10 @@ const projects = [
       "Tailwind CSS",
       "AWS EC2",
     ],
-    liveUrl: "https://decormate.vercel.app",
+    liveUrl: "https://www.godecormate.com",
     githubUrl: "",
     imageUrl:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "https://www.godecormate.com",
     gradient: "from-emerald-500/20 to-cyan-500/20",
   },
   {
@@ -52,7 +52,7 @@ const projects = [
     liveUrl: "https://dev.coinstax.co",
     githubUrl: "",
     imageUrl:
-      "https://images.unsplash.com/photo-1621504450181-5d356f61d307",
+      "https://dev.coinstax.co",
     gradient: "from-blue-500/20 to-purple-500/20",
   },
   {
@@ -76,7 +76,7 @@ const projects = [
     liveUrl: "https://ezee2fly.com",
     githubUrl: "",
     imageUrl:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+      "https://ezee2fly.com",
     gradient: "from-orange-500/20 to-rose-500/20",
   },
   {
@@ -142,7 +142,7 @@ const ProjectsSection = () => {
                       className={`aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br ${project.gradient} card-depth`}
                     >
                       <img
-                        src={project.imageUrl}
+  src={`https://api.microlink.io/?url=${project.liveUrl}&screenshot=true&meta=false`}
                         alt={project.title}
                         className="w-full h-full object-cover"
                         loading="lazy"

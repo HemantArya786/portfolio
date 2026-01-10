@@ -20,7 +20,7 @@ const projects = [
     link: "https://tagmumbai.com",
   },
   {
-    title: "Visualaize.fun",
+    title: "Visual(ai)ze",
     desc: "Showcase for AI-powered design tools with smooth landing animations.",
     tech: ["React", "Vite", "Tailwind CSS"],
     link: "https://visualaize.fun",
