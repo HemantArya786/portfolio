@@ -1,27 +1,21 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
-import Contact from "./components/Contact";
+import { Toaster } from "@/components/ui/toaster"
+import { Toaster as Sonner } from "@/components/ui/sonner"
+import { TooltipProvider } from "@/components/ui/tooltip"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
+import { Outlet } from "react-router-dom"
 
-function App() {
-  return (
-    <div className="scroll-smooth">
-      <Navbar />
-      <main className="">
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Education />
-        <Contact />
-      </main>
-    </div>
-  );
-}
+const queryClient = new QueryClient()
 
-export default App;
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+
+      {/* Nested routes yahan render honge */}
+      <Outlet />
+    </TooltipProvider>
+  </QueryClientProvider>
+)
+
+export default App
