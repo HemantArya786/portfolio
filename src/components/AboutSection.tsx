@@ -6,8 +6,8 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const sentences = [
-    "I'm a Senior Full-Stack Engineer based in Delhi, India.",
-    "With over 4 years of hands-on experience building production-grade applications.",
+    "I'm a junior Full-Stack Engineer based in Delhi, India.",
+    "With over 1.5 years of hands-on experience building production-grade applications.",
     "I specialize in the MERN stack — crafting everything from intuitive frontends to robust backend architectures.",
     "My approach combines technical excellence with product thinking.",
     "I don't just write code — I engineer solutions that scale, perform, and deliver real business value.",
@@ -57,9 +57,9 @@ const AboutSection = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20"
         >
           {[
-            { value: "4+", label: "Years Experience" },
-            { value: "50+", label: "Projects Delivered" },
-            { value: "20+", label: "Happy Clients" },
+            { value: "1+", label: "Years Experience" },
+            { value: "10+", label: "Projects Delivered" },
+            { value: "8+", label: "Happy Clients" },
             { value: "100%", label: "Success Rate" },
           ].map((stat, index) => (
             <div key={index} className="text-center">

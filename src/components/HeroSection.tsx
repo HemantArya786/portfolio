@@ -72,7 +72,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.8 }}
           className="text-primary font-medium text-lg mb-12"
         >
-          Senior Full-Stack MERN Engineer • 4+ Years Experience
+          Junior Full-Stack MERN Engineer • 1+ Years Experience
         </motion.p>
 
         {/* CTA Buttons */}

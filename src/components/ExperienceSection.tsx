@@ -4,7 +4,7 @@ import { useRef } from "react";
 const experiences = [
   {
     period: "2022 — Present",
-    role: "Senior Full-Stack Developer",
+    role: "Junior Full-Stack Developer",
     company: "Leading Tech Startup",
     description: "Architecting and leading the development of a high-traffic SaaS platform serving 100K+ users. Reduced page load times by 60% and implemented real-time collaboration features.",
     highlights: ["System Architecture", "Team Leadership", "Performance Optimization"],
