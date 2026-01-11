@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -108,6 +108,21 @@ const HeroSection = () => {
             >
               <Github className="w-5 h-5" />
             </a>
+
+
+              {/* ✅ WhatsApp */}
+            <a
+              href="https://wa.me/918586918598"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full glass hover:bg-green-500/10 transition-all"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle className="w-5 h-5 text-green-500" />
+            </a>
+
+
+            
           </div>
         </motion.div>
 
@@ -116,7 +131,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
+          className="absolute  left-1/2 -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}

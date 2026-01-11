@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Phone, MapPin, Linkedin, Github, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github, ArrowUpRight, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -23,13 +23,15 @@ const ContactSection = () => {
       icon: MapPin,
       label: "Location",
       value: "Delhi, India",
-      href: "#",
+      href: "https://maps.app.goo.gl/ZgrzAvLb6UUdgka6A",
     },
   ];
 
   const socialLinks = [
     { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
     { icon: Github, label: "GitHub", href: "https://github.com" },
+    { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/918586918598" },
+
   ];
 
   return (

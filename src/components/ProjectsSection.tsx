@@ -1,6 +1,10 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
+import  Tag  from "../../public/tag.png";
+import decormate from "../../public/decormate.png";
+import coinstax from "../../public/coinstax.png";
+import ezee2fly from "../../public/ezee2fly.png";
 
 const projects = [
   {
@@ -25,8 +29,10 @@ const projects = [
     ],
     liveUrl: "https://www.godecormate.com",
     githubUrl: "",
+    imageScreenshot:decormate,
     imageUrl:
       "https://www.godecormate.com",
+    
     gradient: "from-emerald-500/20 to-cyan-500/20",
   },
   {
@@ -51,6 +57,8 @@ const projects = [
     ],
     liveUrl: "https://dev.coinstax.co",
     githubUrl: "",
+        imageScreenshot:coinstax,
+
     imageUrl:
       "https://dev.coinstax.co",
     gradient: "from-blue-500/20 to-purple-500/20",
@@ -75,6 +83,8 @@ const projects = [
     ],
     liveUrl: "https://ezee2fly.com",
     githubUrl: "",
+        imageScreenshot:ezee2fly,
+
     imageUrl:
       "https://ezee2fly.com",
     gradient: "from-orange-500/20 to-rose-500/20",
@@ -93,6 +103,8 @@ const projects = [
     technologies: ["Next.js", "Bootstrap", "CSS"],
     liveUrl: "https://tagmumbai.com",
     githubUrl: "",
+        imageScreenshot:Tag,
+
     imageUrl:
       "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
     gradient: "from-fuchsia-500/20 to-pink-500/20",
@@ -142,9 +154,9 @@ const ProjectsSection = () => {
                       className={`aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br ${project.gradient} card-depth`}
                     >
                       <img
-  src={`https://api.microlink.io/?url=${project.liveUrl}&screenshot=true&meta=false`}
+  src={project.imageScreenshot}
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full  object-cover"
                         loading="lazy"
                       />
                     </div>
