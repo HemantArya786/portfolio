@@ -2,32 +2,50 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const experiences = [
+
   {
-    period: "May 2024 — Present",
-    role: "Full Stack Engineer",
-    company: "SEO Scientist Pvt. Ltd.",
+    period: "Jan 2026 — Present",
+    role: "Full Stack Developer",
+    company: "Chezory – Book Entire Homes Across India",
     description:
-      "Leading development of core MERN-based products while managing and mentoring a small engineering team. Responsible for end-to-end project execution, including R&D, architecture decisions, feature development, and delivery of scalable SEO-focused solutions.",
+      "Building a full-stack vacation rental platform similar to Airbnb using modern MERN technologies. Responsible for architecture, feature development, and deployment of scalable booking and property management systems.",
+    highlights: [
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Booking System",
+      "AI-Assisted Development",
+    ],
+  },
+  {
+    period: "Nov 2025 — Dec 2025",
+    role: "Full Stack Developer (AI Automation)",
+    company: "BrandORYX.io",
+    description:
+      "Worked on an AI-powered business automation platform helping businesses automate marketing and operational workflows using AI and automation tools.",
     highlights: [
       "MERN Stack",
-      "Team Leadership",
-      "Product Architecture",
-      "AI & Automation R&D",
+      "n8n Automation",
+      "GoHighLevel",
+      "Prompt Engineering",
+      "API Integrations",
     ],
   },
   {
-    period: "May 2025 — Nov 2025",
-    role: "Full Stack Engineer (Internship)",
-    company: "GTMotion – Outbound Engine",
+    period: "May 2025 — Oct 2025",
+    role: "MERN Stack Developer",
+    company: "SEO Scientist Pvt. Ltd.",
     description:
-      "Worked on outbound automation systems focusing on performance, scalability, and clean API integrations. Contributed across frontend and backend while collaborating remotely with cross-functional teams.",
+      "Developed scalable internal tools and SEO platforms using MERN stack. Worked on product development, research, and feature implementation while collaborating with the engineering team.",
     highlights: [
-      "React & Node.js",
-      "REST APIs",
-      "Remote Collaboration",
-      "Scalable Systems",
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "SEO Tools",
+      "Web Applications",
     ],
   },
+
   {
     period: "Jan 2025 — Apr 2025",
     role: "Full Stack Engineer (Freelance)",

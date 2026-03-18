@@ -5,8 +5,35 @@ import  Tag  from "../../public/tag.png";
 import decormate from "../../public/decormate.png";
 import coinstax from "../../public/coinstax.png";
 import ezee2fly from "../../public/ezee2fly.png";
+import chezory from "../../public/chezory.png";
 
 const projects = [
+
+  {
+    title: "Chezory",
+    category: "Vacation Rental Booking Platform",
+    description:
+      "Airbnb-style platform for booking entire homes across India with advanced search, property listings, booking calendar, wishlist, and host dashboard.",
+    problem:
+      "Travelers lacked a centralized platform focused on booking entire homes in India with seamless search and booking.",
+    solution:
+      "Built a scalable full-stack platform using Next.js, Node.js, and MongoDB with property management, booking workflows, and responsive UI.",
+    outcome:
+      "Delivered a modern vacation rental platform optimized for mobile and desktop users.",
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+      "AI-assisted development",
+    ],
+    liveUrl: "https://chezory.com",
+    githubUrl: "",
+    imageScreenshot: chezory, // replace later with chezory screenshot
+    imageUrl: "https://chezory.com",
+    gradient: "from-indigo-500/20 to-purple-500/20",
+  },
   {
     title: "DecorMate",
     category: "Full-Stack MERN Platform",

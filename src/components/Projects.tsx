@@ -1,6 +1,13 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
+
+  {
+    title: "Chezory",
+    desc: "Airbnb-style vacation rental platform for booking entire homes across India with advanced search, booking calendar, host dashboard, and wishlist system.",
+    tech: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
+    link: "https://chezory.com",
+  },
   {
     title: "Coinstax",
     desc: "Crypto investment dashboard with dynamic UI and transaction data.",
